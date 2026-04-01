@@ -48,7 +48,7 @@ def load_whisper(path, device):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compare fine-tuned vs base Whisper for Danish ASR")
-    parser.add_argument("--model_path", required=True, help="Path to fine-tuned Whisper folder")
+    parser.add_argument("--model_path", default="abargum/whisper-tiny-base", help="Path or HF repo of fine-tuned Whisper model")
     parser.add_argument("--num_examples", type=int, default=NUM_EXAMPLES, help="Number of examples to compare")
     args = parser.parse_args()
 
