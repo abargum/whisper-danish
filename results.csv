@@ -1,0 +1,6 @@
+model,wer,cer
+Baseline Whisper-tiny,104.38%,50.35%
+Fine-tuned Whisper-tiny,41.13%,19.90%
+hviske-v2,17.71%,11.11%
+rasgaard/whisper-tiny.da,82.37%,41.99%
+Augmented,43.15%,22.20%
