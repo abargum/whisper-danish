@@ -55,13 +55,15 @@ The LoRA model underperformed and was stopped early — LoRA is ill-suited to sm
 
 Models were evaluated on the CoRal-v2 test split using WER and CER, and benchmarked against the untuned `whisper-tiny` baseline, `rasgaard/whisper-tiny.da` (the only other publicly available fine-tuned tiny model), and `hviske-v2` (the Danish SOTA, based on `whisper-large` at 1.55B parameters).
 
-The fine-tuned model scores **~41% WER / ~20% CER**, beating both the baseline (~104% WER) and the rasgaard model (~83% WER), while expectedly trailing the much larger hviske-v2 (~19% WER). A solid result for a 40M-parameter model.
+The fine-tuned model scores **~41% WER / ~20% CER**, beating both the baseline (~104% WER) and the rasgaard model (~83% WER), while expectedly trailing the much larger hviske-v2 (~19% WER).
 
 ![Evaluation results](images/eval.png)
 
 ## API
 
-The fine-tuned model is served via a FastAPI inference server. Start it with:
+The fine-tuned model is served via a FastAPI inference server.
+
+Start it with:
 
 ```bash
 cd whisper-api
