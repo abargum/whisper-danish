@@ -169,7 +169,7 @@ def evaluate_pipeline(pipe, dataset, batch_size: int, label: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate ASR models on CoRal test set")
-    parser.add_argument("--finetuned_model",  required=True,
+    parser.add_argument("--finetuned_model", default="abargum/whisper-tiny-base",
                         help="Path or HF repo of your fine-tuned Whisper-tiny checkpoint")
     parser.add_argument("--baseline_model",   default="openai/whisper-tiny",
                         help="Baseline Whisper model (default: openai/whisper-tiny)")

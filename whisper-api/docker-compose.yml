@@ -1,0 +1,14 @@
+services:
+  whisper-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - hf-cache:/root/.cache/huggingface 
+    environment:
+      FINETUNED_MODEL_PATH: abargum/whisper-tiny-base
+      FINETUNED_LANGUAGE: da
+    restart: unless-stopped
+
+volumes:
+  hf-cache:
