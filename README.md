@@ -7,10 +7,9 @@ Fine-tuning OpenAI Whisper-tiny on Danish speech, with evaluation scripts and a 
 The model was trained on Python 3.10 and a CUDA-capable GPU (tested with CUDA 11.7).
 
 ```bash
-# Create and activate a pyenv virtualenv
-pyenv install 3.10.14
-pyenv virtualenv 3.10.14 whisper-danish
-pyenv activate whisper-danish
+# Create and activate a virtual environment
+python3.10 -m venv venv
+source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu117
